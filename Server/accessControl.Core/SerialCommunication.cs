@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.IO.Ports;
+using accessControl.Core.Logging;
 
 namespace accessControl.Core
 {
@@ -21,6 +22,7 @@ namespace accessControl.Core
                 while (!_worker.CancellationPending)
                 {
                     var data = _serialPort.ReadLine();
+                    Logger.Log(LogSeverity.Debug, $"Incoming data: {data}");
                     _receiveCallback.Invoke(data);
                 }
                 _serialPort.Close();
@@ -41,14 +43,14 @@ namespace accessControl.Core
         private void StopListening()
         {
             if (_listening)
-            {
                 _worker.CancelAsync();
-            }
         }
 
-        public void Send(string message)
+        public void Send(Message message)
         {
-            _serialPort.WriteLine(message);
+            var rawMessage = message.Serialize();
+            Logger.Log(LogSeverity.Debug, $"Outgoing data: {rawMessage}");
+            _serialPort.Write(rawMessage);
         }
 
         public void Dispose()

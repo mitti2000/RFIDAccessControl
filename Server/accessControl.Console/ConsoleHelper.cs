@@ -1,4 +1,6 @@
-﻿namespace accessControl.Console
+﻿using System;
+
+namespace accessControl.Console
 {
     public class ConsoleHelper
     {
@@ -10,6 +12,7 @@
             System.Console.WriteLine(@" / ___ / /__/ /__/  __(__  |__  ) /___/ /_/ / / / / /_/ /  / /_/ / /  ");
             System.Console.WriteLine(@"/_/  |_\___/\___/\___/____/____/\____/\____/_/ /_/\__/_/   \____/_/   ");
             System.Console.WriteLine("");
+            System.Console.WriteLine(@"----------------------------------------------------------------------");
         }
     }
 }

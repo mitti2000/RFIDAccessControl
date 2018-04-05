@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "accessControl.Core", "accessControl.Core.csproj", "{8F5CA01E-2F58-43E6-9716-042120E8F456}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "accessControl.Core", "accessControl.Core\accessControl.Core.csproj", "{8F5CA01E-2F58-43E6-9716-042120E8F456}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "accessControl.Console", "accessControl.Console.csproj", "{B5E597A8-4AA7-48C9-B012-306A1A933343}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "accessControl.Console", "accessControl.Console\accessControl.Console.csproj", "{B5E597A8-4AA7-48C9-B012-306A1A933343}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
