@@ -1,0 +1,6 @@
+D:\Projects\accessControl\accessControl.Core\bin\Debug\accessControl.Core.dll
+D:\Projects\accessControl\accessControl.Core\bin\Debug\accessControl.Core.pdb
+D:\Projects\accessControl\accessControl.Core\obj\Debug\accessControl.Core.csprojResolveAssemblyReference.cache
+D:\Projects\accessControl\accessControl.Core\obj\Debug\accessControl.Core.csproj.CoreCompileInputs.cache
+D:\Projects\accessControl\accessControl.Core\obj\Debug\accessControl.Core.dll
+D:\Projects\accessControl\accessControl.Core\obj\Debug\accessControl.Core.pdb

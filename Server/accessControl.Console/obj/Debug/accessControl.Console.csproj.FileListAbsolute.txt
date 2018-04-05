@@ -1,0 +1,10 @@
+D:\Projects\accessControl\accessControl.Console\bin\Debug\accessControl.Console.exe.config
+D:\Projects\accessControl\accessControl.Console\bin\Debug\accessControl.Console.exe
+D:\Projects\accessControl\accessControl.Console\bin\Debug\accessControl.Console.pdb
+D:\Projects\accessControl\accessControl.Console\obj\Debug\accessControl.Console.csproj.CoreCompileInputs.cache
+D:\Projects\accessControl\accessControl.Console\obj\Debug\accessControl.Console.exe
+D:\Projects\accessControl\accessControl.Console\obj\Debug\accessControl.Console.pdb
+D:\Projects\accessControl\accessControl.Console\bin\Debug\accessControl.Core.dll
+D:\Projects\accessControl\accessControl.Console\bin\Debug\accessControl.Core.pdb
+D:\Projects\accessControl\accessControl.Console\obj\Debug\accessControl.Console.csprojResolveAssemblyReference.cache
+D:\Projects\accessControl\accessControl.Console\obj\Debug\accessControl.Console.csproj.CopyComplete
