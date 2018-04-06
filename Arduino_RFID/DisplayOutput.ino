@@ -22,6 +22,7 @@ void chipNotAcceptedResponse(){
   digitalWrite(LED_RED, HIGH);
   writeToDisplay("Badge not",1);
   writeToDisplay("recognized",2);
+  firstSection();
   delay(3000);
   digitalWrite(LED_RED, LOW);
   clearDisplayLine(1);
@@ -34,6 +35,7 @@ void accessGranted(){
   digitalWrite(LED_GREEN, HIGH);
   clearDisplayLine(2);
   writeToDisplay("Access Granted",1);
+  secondSection();
   delay(3000);
   digitalWrite(LED_GREEN, LOW);
   initMessage = false;
@@ -54,10 +56,17 @@ void pinTimeout(){
   digitalWrite(LED_RED, HIGH);
     writeToDisplay("Timeout!",1);
     writeToDisplay("Try again!",2);
+    firstSection();
     delay(2000);
     digitalWrite(LED_RED, LOW);
     clearDisplayLine(1);
     clearDisplayLine(2);
     initMessage = false;
 }
+
+void showPinEntry(int pos){
+  lcd.setCursor(pos,2);
+  lcd.print("*");
+}
+
 

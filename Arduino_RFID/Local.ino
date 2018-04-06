@@ -38,9 +38,11 @@ String waitForPin(){
     }
     if(old + 20000 < millis()) return "0";     
     pinCode += key;
+    showPinEntry(counter + 11);
     counter++;
     key = 0;
   }
 return pinCode;
 }
+
 

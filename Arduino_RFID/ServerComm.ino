@@ -7,13 +7,11 @@ void sendToServer(String function, String data){
 // wait for Server Response
 String waitForMessage(String function){
   String response;
-  unsigned long now = millis();
+  unsigned long old = millis();
   do{
-    /*
-    if(millis() - 5000 < now){
-      return "fail";
+    if(old + 5000 < millis()){
+      return "timeout";
     }
-    */
     response = Serial.readString();    
   }
   while(response.length() == 0);
@@ -24,5 +22,6 @@ String waitForMessage(String function){
 
   return "bullshit";
 }
+
 
 

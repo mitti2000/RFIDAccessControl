@@ -8,6 +8,7 @@
 #define RST_PIN A2 // Reset Pin of RFID Reader
 #define LED_RED A0 // Red LED
 #define LED_GREEN A1 // Green LED
+#define BUZZER_PIN 9
 MFRC522 rfid(SS_PIN, RST_PIN);  // Create MFRC522 instance.
 LiquidCrystal_PCF8574 lcd(0x3F); // Create display Instance
 boolean initMessage = false; // is inital message set?
@@ -35,6 +36,7 @@ void setup() {
   SPI.begin();        // Init SPI bus
   pinMode(A0, OUTPUT);
   pinMode(A1, OUTPUT);
+  pinMode(BUZZER_PIN, OUTPUT);
   digitalWrite(A0,LOW);
   digitalWrite(A1,LOW);
   lcd.begin(16,2); // Init Display
@@ -79,11 +81,13 @@ void loop() {
     sendToServer("pin", pinMessage); // send message to server
     String access = waitForMessage("access"); // wait for server response
     if(access.equals("true")) accessGranted(); // if pin is ok grant access
+    else if (access.equals("timeout")) pinTimeout();
     else accessDenied(); // if pin is not ok, deny access
   } else{
     pinTimeout(); // otherwise show the timeout
   }
 }
+
 
 
 
