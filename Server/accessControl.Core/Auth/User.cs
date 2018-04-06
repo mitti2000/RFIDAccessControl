@@ -1,18 +1,18 @@
-﻿namespace accessControl.Core.Auth
+﻿using SQLite.Net.Attributes;
+
+namespace accessControl.Core.Auth
 {
     public class User
     {
-        public User(long id, string name, string password)
-        {
-            Id = id;
-            Name = name;
-            Password = password;
-        }
+        [PrimaryKey]
+        public long Id { get; set; }
 
-        public long Id { get; }
+        public string Name { get; set; }
 
-        public string Name { get; }
+        public string Password { get; set; }
 
-        public string Password { get; }
+        public int Granted { get; set; }
+
+        public int Denied { get; set; }
     }
 }
