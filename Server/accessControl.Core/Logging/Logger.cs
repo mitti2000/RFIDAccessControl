@@ -15,13 +15,15 @@ namespace accessControl.Core.Logging
             switch (severity)
             {
                 case LogSeverity.Debug:
-                    return ConsoleColor.Gray;
+                    return ConsoleColor.DarkGray;
                 case LogSeverity.Info:
                     return ConsoleColor.White;
                 case LogSeverity.Warning:
                     return ConsoleColor.Yellow;
                 case LogSeverity.Error:
                     return ConsoleColor.Red;
+                case LogSeverity.Success:
+                    return ConsoleColor.Green;
                 default:
                     return ConsoleColor.White;
             }

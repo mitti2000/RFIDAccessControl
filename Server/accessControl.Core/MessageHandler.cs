@@ -60,8 +60,14 @@ namespace accessControl.Core
 
             _writeMessageDelegate.Invoke(responseMessage);
 
-            var grantLogMessage = granted ? "Access granted " : "Access denied";
-            Logger.Log(LogSeverity.Info, $"{grantLogMessage} for user with id: {id}");
+            if (granted)
+            {
+                Logger.Log(LogSeverity.Success, $"Access granted for user with id: {id}");
+            }
+            else
+            {
+                Logger.Log(LogSeverity.Warning, $"Access denied for user with id: {id}");
+            }
         }
     }
 }
