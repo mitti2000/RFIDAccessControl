@@ -29,13 +29,7 @@ void beep(int note, int duration)
   tone(buzzerPin, note, duration);
  
   //Play different LED depending on value of 'counter'
-  if(counter % 2 == 0)
-  {
-    delay(duration);
-  }else
-  {
-    delay(duration);
-  }
+  delay(duration);
  
   //Stop tone on buzzerPin
   noTone(buzzerPin);
@@ -59,30 +53,6 @@ void firstSection()
   beep(a, 650);
 }
  
-void secondSection()
-{
-  beep(aH, 500);
-  beep(a, 300);
-  beep(a, 150);
-  beep(aH, 500);
-  beep(gSH, 325);
-  beep(gH, 175);
-  beep(fSH, 125);
-  beep(fH, 125);    
-  beep(fSH, 250);
- 
-  delay(325);
- 
-  beep(aS, 250);
-  beep(dSH, 500);
-  beep(dH, 325);  
-  beep(cSH, 175);  
-  beep(cH, 125);  
-  beep(b, 125);  
-  beep(cH, 250);  
- 
-  delay(350);
-}
 
 
 
