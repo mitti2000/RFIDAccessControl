@@ -21,8 +21,6 @@ namespace accessControl.Core
             _handlers.Add(Function.pin, HandlePinMessage);
 
             _authentication = new UserAuthentication();
-            UserRepository.Instance.Add(new User(5406, "Thomas", "1234"));
-            UserRepository.Instance.Add(new User(13699, "Dominic", "1111"));
         }
 
         public void Handle(Message message)

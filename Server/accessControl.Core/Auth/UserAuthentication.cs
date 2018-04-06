@@ -8,7 +8,7 @@ namespace accessControl.Core.Auth
         {
             var user = UserRepository.Instance.Get(id);
 
-            return password == user.Password;
+            return user != null && password == user.Password;
         }
     }
 }

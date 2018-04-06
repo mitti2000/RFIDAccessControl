@@ -16,11 +16,14 @@ namespace accessControl.Console
                 System.Console.ReadKey();
                 return;
             }
-
+            
             var port = args[0];
             var baudRate = Convert.ToInt32(args[1]);
+            ConsoleHelper.PrintIntroTitle();
 
             var serialCommunication = new SerialCommunication(port, baudRate);
+            Logger.Log(LogSeverity.Info, $"Server listening on {port} using a baudrate of {baudRate}");
+
             _handler = new MessageHandler(serialCommunication.Send);
 
             serialCommunication.StartListening(s =>
@@ -29,8 +32,6 @@ namespace accessControl.Console
                 _handler.Handle(message);
             });
 
-            ConsoleHelper.PrintIntroTitle();
-            Logger.Log(LogSeverity.Info, $"Server listening on {port} using a baudrate of {baudRate}");
             System.Console.ReadKey();
         }
     }

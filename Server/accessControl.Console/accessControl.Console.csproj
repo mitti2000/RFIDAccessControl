@@ -56,4 +56,10 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>copy "$(SolutionDir)lib\sqlite3.dll" "$(ProjectDir)\$(OutDir)"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(SolutionDir)lib\sqlite3.dll" "$(ProjectDir)\$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
