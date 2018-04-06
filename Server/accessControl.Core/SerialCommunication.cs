@@ -21,11 +21,28 @@ namespace accessControl.Core
                 _serialPort.Open();
                 while (!_worker.CancellationPending)
                 {
-                    var data = _serialPort.ReadLine();
-                    Logger.Log(LogSeverity.Debug, $"Incoming data: {data}");
-                    _receiveCallback.Invoke(data);
+                    try
+                    {
+                        var data = _serialPort.ReadLine();
+                        Logger.Log(LogSeverity.Debug, $"Incoming data: {data}");
+                        _receiveCallback.Invoke(data);
+                    }
+                    catch (Exception e)
+                    {
+                        Logger.Log(LogSeverity.Error, $"Error while reading from serial port: {e.Message}");
+                    }
+                    
                 }
-                _serialPort.Close();
+                Logger.Log(LogSeverity.Info, "Closing serial port");
+                try
+                {
+                    _serialPort.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
                 _listening = false;
             };
         }
