@@ -12,7 +12,7 @@ namespace accessControl.Console
         {
             if (args.Length != 2)
             {
-                System.Console.WriteLine("Pass the com port and the baudrate as arguments!");
+                Logger.Log(LogSeverity.Error, "Pass the com port and the baudrate as arguments!");
                 System.Console.ReadKey();
                 return;
             }

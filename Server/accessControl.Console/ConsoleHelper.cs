@@ -6,6 +6,8 @@ namespace accessControl.Console
     {
         public static void PrintIntroTitle()
         {
+            System.Console.ForegroundColor = ConsoleColor.Magenta;
+            System.Console.WriteLine(@"----------------------------------------------------------------------");
             System.Console.WriteLine(@"    ___                            ______            __             __");
             System.Console.WriteLine(@"   /   | _____________  __________/ ____/___  ____  / /__________  / /");
             System.Console.WriteLine(@"  / /| |/ ___/ ___/ _ \/ ___/ ___/ /   / __ \/ __ \/ __/ ___/ __ \/ / ");

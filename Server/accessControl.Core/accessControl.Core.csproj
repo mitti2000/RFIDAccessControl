@@ -41,7 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auth\User.cs" />
-    <Compile Include="Auth\UserRepository.cs" />
+    <Compile Include="Auth\UserAuthentication.cs" />
+    <Compile Include="Data\UserRepository.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Logging\LogSeverity.cs" />
@@ -50,5 +51,6 @@
     <Compile Include="SerialCommunication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
